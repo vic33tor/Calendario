@@ -3,15 +3,23 @@
     <div
       v-for="(item, index) in days"
       :key="index"
-      class="border-2 border-black p-4"
+      class="border-x border-y border-black p-4"
     >
       {{ item }}
     </div>
     <div
       v-for="(item, index) in days"
       :key="index"
-      class="border-2 border-black p-4 h-screen"
-    ></div>
+      class="border-x border-black p-4"
+    >
+      <div
+        v-for="(item, index) in 24"
+        :key="index"
+        class="border-b border-black p-4"
+      >
+        {{ item - 1 }}:00
+      </div>
+    </div>
   </div>
 </template>
 
